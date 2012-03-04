@@ -4,7 +4,7 @@
 Plugin Name: Enhanced Publication
 Plugin URI: http://ep-books.ehumanities.nl/semantic-words/enhanced-publication
 Description: Resource map for Enhanced Publication.
-Version: 0.1.5
+Version: 1.0
 Author: Zuotian Tatum, Clifford Tatum
 */
 
