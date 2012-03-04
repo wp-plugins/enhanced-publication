@@ -11,15 +11,18 @@ Convert your WordPress site into an enhanced publication.
 
 The primary function of the Enhanced Publication plugin is to describe a WordPress site as an OAI-ORE aggregated publication (an enhanced publication).
 In this structure, we convert WordPress pages into book chapters and use various other plugins to facilitate and describe reference lists, authors and editors, and attachments.
-You can access the aggregation rdf at `http://yoursite/feed/aggregation-rdf/`.
+These content relationships are then exposed in RDF utilizing the WordPress syndication feed.
+You can access the aggregation rdf at `http://<yoursite>/feed/aggregation-rdf/`.
 
-For visualizing the content object relationships, we employ [SURF](http://surffoundation.nl)'s
+For visualizing the content (object) relationships, we employ [SURF](http://surffoundation.nl)'s
 [InContext Visualiser](http://wiki.surffoundation.nl/display/vp/4.3+'InContext'+Visualiser).
 
-This combination of Web site and publication objects was not readily compatible with any single ontology.
-We therefore selected a list of related ontologies to describe the full content of the aggregation.
-For example, the following list of ontologies were used in creating a new ontology that includes objects such as a single book chapter,
-among other chapters in an edited volume, as a published text with multiple authors, an abstract, figures, and a reference list.
+The content ontology utilized is based on selected relationships from among a number of standard ontologies.
+This combination was necessary to describe the full content aggregation of combined book and website content (e.g. an 'Enhanced Publication').
+
+The following list of ontologies were used in creating content relationships for a website instance of an edited volume (book) with co-authored book chapters, abstracts, figures, and a reference list.
+NOTE: our companion plugin, [Enhanced BibliPlug](http://wordpress.org/extend/plugins/enhanced-bibliplug/) integrated with this plugin, such that references in the
+BibliPlug database are automatically included in the content relationships and exposed in the RDF output.
 
 * RDF: Resource Description Framework Ontology;
 * OAI-ORE Vocabulary for Resource Aggregation;
@@ -44,6 +47,7 @@ for reference management to enrich your chapter content.
 
 = Included packages =
 [semsol-arc2](http://arc.semsol.org/ "semsol-arc2") version 2011-12-1 for RDF serialization.
+
 [InContext Visualiser](http://wiki.surffoundation.nl/display/vp/4.3+'InContext'+Visualiser) verion 1.1 for RDF visualization.
 
 
@@ -62,6 +66,17 @@ for reference management to enrich your chapter content.
 Note: you may need to clear brower cache if you don't see your changes showing up in the visualization.
 
 You are done!
+
+== Frequently Asked Questions ==
+
+= How to include references for a book chapter =
+The reference functionality is provided by our companion plugin, [Enhanced BibliPlug](http://wordpress.org/extend/plugins/enhanced-bibliplug/). 
+
+1. Install and activate [Enhanced BibliPlug](http://wordpress.org/extend/plugins/enhanced-bibliplug/), 
+2. Create a reference category for a given chapter, for example, "chapter1"
+3. Mark your references associated with chapter one with category "chapter1".
+4. Go to the Book Chapter that represent chapter 1, and choose "chapter1" for "Reference category name" in the Enhanced Publication fields, and save your chapter.
+5. View your Book Chapter to confirm references are shown at the bottom of the webpage.
 
 == Screenshots ==
 1. Visualization
